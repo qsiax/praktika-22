@@ -1,0 +1,159 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid $text;
+    background: $main-color;
+    z-index: 20;
+    transition: .3s ease;
+
+    &.sticky {
+        background: $bg;
+        border-bottom: 1px solid #707070;
+        .header__logo {
+            background: url(/source/logo-white.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .header__navigation {
+            color: #707070;
+            span {
+                color: $text-white;
+            }
+        }
+        .header__search {
+            background: url(/source/search-white.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .header__profile {
+            background: url(/source/profile-white.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .header__btn {
+            background: url(/source/menu-white.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    // .header__container
+
+    &__container {
+        position: relative;
+    }
+
+    // .header__body
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__popup {
+        position: absolute;
+        right: 45px;
+        bottom: -151px;
+        width: 100px;
+        height: 150px;
+        background: $main-color;
+        border-bottom: 1px solid #707070;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 3px 12px 20px -12px rgba(34, 60, 80, 0.2);
+        transform: translateX(100px);
+        opacity: 0;
+        transition: .5s ease;
+        &.active {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    &__popup-login {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        max-width: 90px;
+    }
+
+    &__popup-exit {
+        color: $error;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    // .header__block
+
+    &__block {
+        display: flex;
+        align-items: center;
+        padding: 30px 0px;
+        &:nth-child(3) {
+            width: 156px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__navigation {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 90%;
+        color: #707070;
+        user-select: none;
+        span {
+            color: $text;
+        }
+    }
+
+    &__logo {
+        width: 142.75px;
+        height: 48px;
+        background: url(/source/logo.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    // .header__btn
+
+    &__search {
+        width: 32px;
+        height: 32px;
+        background: url(/source/serach.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+ 
+    &__profile {
+        width: 32px;
+        height: 32px;
+        background: url(/source/profile.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    &__btn {
+        width: 32px;
+        height: 32px;
+        background: url(/source/menu.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    &__btn-text {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 100%;
+    }
+
+}

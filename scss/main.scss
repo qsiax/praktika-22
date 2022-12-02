@@ -1,0 +1,75 @@
+@import "_reset";
+@import "_ui";
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	overflow-x: hidden;
+	font-size: 16px;
+	color: $text;
+	background: $main-color;
+	font-family: 'Manrope', sans-serif;
+	position: relative;
+	max-height: 100%;
+	&::-webkit-scrollbar {
+		width: 0;
+	}
+	a {
+		text-decoration: none;
+		color: $text;
+	}
+	li {
+		list-style: none;
+	}
+}
+
+._container {
+	max-width: 1760px;
+	margin: 0 auto;
+}
+
+@import '_auth';
+@import '_signup';
+@import '_header';
+@import '_home';
+@import '_footer';
+
+
+#error {
+	width: 100%;
+	color: $error;
+	font-size: 1em;
+}
+
+.wrapper-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-height: 100%;
+	width: 100%;
+	transition: .5s ease;
+	z-index: 40;
+	background-color: rgba(0, 0, 0, .4);
+	visibility: hidden;
+
+	&.active {
+		visibility: visible;
+	}
+}
+.wrapper {
+	transition: .5s ease;
+	&.active {
+		filter: blur(5px);
+		user-select: none;
+		pointer-events: none;
+	}
+}

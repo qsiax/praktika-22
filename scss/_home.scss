@@ -1,0 +1,114 @@
+.home {
+    transition: .5s ease;
+    position: relative;
+    background: $main-color;
+    // .home__container
+
+    &__container {
+    }
+
+    // .home__body
+
+    &__body {
+        padding-bottom: 60px;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 50px;
+    }
+
+    &__heading {
+        margin-top: 188px;
+        font-weight: 400;
+        font-size: 87px;
+        line-height: 90%;
+        text-transform: uppercase;
+        max-width: 640px;
+        span {
+            font-family: 'Playfair Display', serif;
+            color: $primary-color;
+            font-weight: 400;
+            font-style: italic;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        max-width: 340px;
+        display: flex;
+        align-items: end;
+    }
+
+    // .home__item-wrapper
+
+    &__item-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    // .home__item
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .home__item-img
+
+    &__item-img {
+        width: 336px;
+        height: 340px;
+        background: $primary-color;
+    }
+
+    // .home__item-title
+
+    &__item-title {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 100%;
+        text-decoration: underline;
+        padding: 30px 0px;
+    }
+
+    // .home__item-text
+
+    &__item-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+        color: $text-secondary;
+    }
+
+    &__item-arrow-next {
+        position: absolute;
+        top: 74%;
+        right: 35px;
+        width: 15px;
+        height: 30px;
+        background: url(/source/arrow.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateY(-74%);
+        cursor: pointer;
+        z-index: 11;
+    }
+
+    &__item-arrow-prev {
+        position: absolute;
+        top: 74%;
+        left: 35px;
+        width: 15px;
+        height: 30px;
+        background: url(/source/arrow.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: rotate(180deg) translateY(-74%);
+        cursor: pointer;
+    }
+}
